@@ -1,0 +1,11 @@
+includes:
+  - phpstan-baseline.neon
+parameters:
+    level: max
+    phpVersion: 80100
+    paths:
+        - Classes
+        - Configuration
+        # - Tests
+        - ext_localconf.php
+        - ext_tables.php
