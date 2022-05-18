@@ -2,18 +2,27 @@
   "name": "sinso/variables",
   "description": "Search and replace strings recursively after page generation using user-managed replacement definitions.",
   "type": "typo3-cms-extension",
-  "license": "GPL-2.0+",
+  "license": "GPL-2.0-or-later",
   "autoload": {
     "psr-4": {
       "Sinso\\Variables\\": "Classes/"
     }
   },
   "require": {
-    "typo3/cms-core": "^9.5 || ^10.4.10",
-    "php": ">=7.0.0"
+    "typo3/cms-core": "^11.5",
+    "php": "8.1.*"
   },
-  "suggest": {
+  "extra": {
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "extension-key": "variables",
+      "web-dir": ".Build/web"
+    }
   },
-  "require-dev": {
+  "config": {
+    "allow-plugins": {
+      "typo3/cms-composer-installers": true,
+      "typo3/class-alias-loader": true
+    }
   }
 }
