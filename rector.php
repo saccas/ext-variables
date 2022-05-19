@@ -42,9 +42,9 @@ return static function (RectorConfig $rectorConfig): void {
 
     // If you only want to process one/some TYPO3 extension(s), you can specify its path(s) here.
     // If you use the option --config change __DIR__ to getcwd()
-    // $rectorConfig->paths([
-    //    __DIR__ . '/packages/acme_demo/',
-    // ]);
+    $rectorConfig->paths([
+       __DIR__,
+    ]);
 
     // If you use the option --config change __DIR__ to getcwd()
     $rectorConfig->skip([
