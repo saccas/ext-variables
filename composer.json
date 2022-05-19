@@ -14,7 +14,6 @@
   },
   "extra": {
     "typo3/cms": {
-      "cms-package-dir": "{$vendor-dir}/typo3/cms",
       "extension-key": "variables",
       "web-dir": ".Build/web"
     }
@@ -26,6 +25,7 @@
     }
   },
   "require-dev": {
-    "phpstan/phpstan": "^1.6"
+    "phpstan/phpstan": "^1.6",
+    "rector/rector": "^0.12.23"
   }
 }
