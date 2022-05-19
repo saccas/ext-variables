@@ -8,24 +8,11 @@ $EM_CONF[$_EXTKEY] = [
     'title' => 'Content Variables',
     'description' => 'Search and replace strings recursively after page generation using user-managed replacement definitions.',
     'category' => 'misc',
-    'shy' => 0,
     'version' => '3.0.0',
-    'dependencies' => '',
-    'conflicts' => '',
-    'priority' => '',
-    'loadOrder' => '',
-    'module' => '',
     'state' => 'beta',
-    'uploadfolder' => 0,
-    'createDirs' => '',
-    'modify_tables' => '',
-    'clearcacheonload' => 0,
-    'lockType' => '',
     'author' => 'Xavier Perseguers',
     'author_email' => 'xavier@causal.ch',
     'author_company' => 'Swisscom (Schweiz) AG',
-    'CGLcompliance' => '',
-    'CGLcompliance_note' => '',
     'constraints' => [
         'depends' => [
             'typo3' => '9.5.0-10.9.99',
@@ -37,6 +24,4 @@ $EM_CONF[$_EXTKEY] = [
         ],
     ],
     '_md5_values_when_last_written' => '',
-    'suggests' => [
-    ],
 ];
