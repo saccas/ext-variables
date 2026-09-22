@@ -87,7 +87,7 @@ class VariablesService
         MarkerCollection $markerCollection,
         string &$text
     ): void {
-        $markerRegexp = '/(' . implode('|', array_map(preg_quote(...), $markerCollection->getMarkerKeys())) . ')/';
+        $markerRegexp = $this->buildMarkerRegExp($markerCollection);
 
         $loops = 0;
 
@@ -167,6 +167,16 @@ class VariablesService
             }
         }
         return $markers;
+    }
+
+    private function buildMarkerRegExp(MarkerCollection $markerCollection): string
+    {
+        $quotedMarkerKeys = [];
+        foreach ($markerCollection->getMarkerKeys() as $markerKey) {
+            $quotedMarkerKeys[] = preg_quote($markerKey, '/');
+        }
+
+        return '/(' . implode('|', $quotedMarkerKeys) . ')/';
     }
 
     private function setCacheTags(
